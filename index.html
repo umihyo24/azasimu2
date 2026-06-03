@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seal Colony MVP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-panel">
+      <canvas id="gameCanvas" width="720" height="720" aria-label="Seal colony simulation map"></canvas>
+      <div id="startScreen" class="overlay">
+        <div class="dialog">
+          <h1>Seal Colony</h1>
+          <p>Help one tiny seal colony survive for three in-game days.</p>
+          <button id="startButton" type="button">Start Game</button>
+        </div>
+      </div>
+      <div id="gameOverScreen" class="overlay hidden">
+        <div class="dialog">
+          <h1 id="gameOverTitle">Colony Report</h1>
+          <p id="gameOverMessage"></p>
+          <button id="restartButton" type="button">Restart</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="hud" aria-live="polite">
+      <h2>Colony Status</h2>
+      <dl>
+        <dt>Phase</dt><dd id="phaseText">start</dd>
+        <dt>Day</dt><dd id="dayText">1</dd>
+        <dt>Time</dt><dd id="timeText">00:00</dd>
+        <dt>Storage Fish</dt><dd id="storageText">0 / 0</dd>
+        <dt>Seal Hunger</dt><dd id="hungerText">0 / 0</dd>
+        <dt>Seal Task</dt><dd id="taskText">waiting</dd>
+      </dl>
+
+      <h2>Selected Tile</h2>
+      <p id="tileText">Click a map tile to inspect terrain and fish.</p>
+
+      <h2>Goal</h2>
+      <p>Survive for 3 in-game days. Keep the seal fed by catching fish from shallow water.</p>
+    </aside>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
