@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seal Colony Manager MVP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Seal Colony Manager MVP">
+      <section class="hud-panel" aria-label="Colony status">
+        <div class="title-block">
+          <p class="eyebrow">MVP Simulation</p>
+          <h1>Seal Colony Manager</h1>
+          <p>At-a-glance colony status, visible worker intent, and clear resource feedback.</p>
+        </div>
+        <div id="resourceBars" class="resource-bars" aria-live="polite"></div>
+        <div class="debug-card">
+          <h2>Debug</h2>
+          <dl id="debugInfo"></dl>
+        </div>
+      </section>
+      <section class="simulation-card" aria-label="Simulation view">
+        <canvas id="gameCanvas" width="960" height="600" role="img" aria-label="Animated seal collecting fish and delivering it to food storage"></canvas>
+      </section>
+    </main>
+    <script src="src/game.js"></script>
+  </body>
+</html>
